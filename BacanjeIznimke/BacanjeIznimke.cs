@@ -17,9 +17,9 @@ namespace Vsite.CSharp
                 for (int i = 2; i <= broj; ++i)
                     rezultat *= i;
                 return rezultat;
-            }
-            catch (OverflowException e) { new ArgumentOutOfRangeException("Argument je prevelik", e); }
-            return 0;
+            }catch (OverflowException e)
+            { throw new ArgumentOutOfRangeException("Argument je prevelik", e); }
+            
         }
     
 
